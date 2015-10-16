@@ -5,6 +5,6 @@ FROM docker.io/kevensen/centos-vnc
 MAINTAINER Ken Evensen
 
 USER root
-RUN yum install -y firefox; yum clean all; rm -rf /var/cache/yum
+RUN yum install -y firefox spice-xpi; yum clean all; rm -rf /var/cache/yum
 RUN /bin/echo "/usr/bin/firefox" >> /home/basicuser/.vnc/xstartup 
 USER basicuser
